@@ -1,0 +1,31 @@
+diff --git a/Resources/PinConfigs.kext/Contents/Info.plist b/Resources/PinConfigs.kext/Contents/Info.plist
+index 8dd7698..3438062 100644
+--- a/Resources/PinConfigs.kext/Contents/Info.plist
++++ b/Resources/PinConfigs.kext/Contents/Info.plist
+@@ -9076,6 +9076,26 @@
+ 					<key>WakeVerbReinit</key>
+ 					<true/>
+ 				</dict>
++				<dict>
++					<key>AFGLowPowerState</key>
++					<data>AwAAAA==</data>
++					<key>Codec</key>
++					<string>Andres ZeroCross - Conexant CX8070 for Lenovo ThinkPad E14</string>
++					<key>CodecID</key>
++					<integer>351346567</integer>
++					<key>Comment</key>
++					<string>Conexant SN6140 for Lenovo ZhaoYang X3-14 IRL</string>
++					<key>ConfigData</key>
++					<data>AXccEAF3HQABdx4XAXcfkQGnHCABpx0AAaceoAGnH5ABlxwwAZcdEAGXHoEBlx8AAWccQAFnHRABZx4hAWcfAAF3DAIBZwwCAZcHJAGnByQ=</data>
++					<key>FuncGroup</key>
++					<integer>1</integer>
++					<key>LayoutID</key>
++					<integer>21</integer>
++					<key>WakeConfigData</key>
++					<data>AXcMAgFnDAIBlwckAacHJA==</data>
++					<key>WakeVerbReinit</key>
++					<true/>
++				</dict>
+ 				<dict>
+ 					<key>AFGLowPowerState</key>
+ 					<data>AwAAAA==</data>
