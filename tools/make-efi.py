@@ -5,13 +5,14 @@ Usage: make-efi.py EFI_FOLDER OUTPUT.zip
 Leaves out HfsPlus.efi and refuses to finish if the source config's real
 serial, MLB, UUID or ROM appears in any packed file.
 """
-import pathlib, plistlib, shutil, sys, tempfile
+import base64, pathlib, plistlib, shutil, sys, tempfile
 
 source, output = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]).resolve()
 repo = pathlib.Path(__file__).resolve().parents[1]
 generic = plistlib.load(open(source / 'OC/config.plist', 'rb'))['PlatformInfo']['Generic']
 secrets = [generic[k].encode() for k in ('SystemSerialNumber', 'MLB', 'SystemUUID')]
 secrets += [generic['SystemUUID'].lower().encode(), generic['ROM'], generic['ROM'].hex().encode()]
+secrets += [generic['ROM'].hex().upper().encode(), base64.b64encode(generic['ROM'])]
 
 with tempfile.TemporaryDirectory() as tmp:
     efi = pathlib.Path(tmp) / 'EFI'
